@@ -46,7 +46,7 @@ export default {
 
     methods: {
 
-        validarUsuario() {
+        async validarUsuario() {
             try {
                 await this.$axios.post('auth/loguear');
                 this.$toast.success('¡ Bienvenido !');
