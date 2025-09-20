@@ -13,3 +13,5 @@ yarn-error.log*
 # IDEs
 .vscode/
 .DS_Store
+.env
+package-lock.json
