@@ -2,6 +2,12 @@ import colors from 'vuetify/es5/util/colors'
 
 export default {
   mode: 'universal',
+
+  server: {
+    host: '0.0.0.0', 
+    port: 3000     
+  },
+
   /*
   ** Headers of the page
   */
@@ -24,13 +30,11 @@ export default {
   /*
   ** Global CSS
   */
-  css: [
-  ],
+  css: [],
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: [],
   /*
   ** Nuxt.js dev-modules
   */
@@ -50,7 +54,6 @@ export default {
   },
   /*
   ** vuetify module configuration
-  ** https://github.com/nuxt-community/vuetify-module
   */
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
@@ -73,10 +76,6 @@ export default {
   ** Build configuration
   */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend (config, ctx) {
-    }
+    extend (config,ctx){}
   }
 }
