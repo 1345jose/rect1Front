@@ -14,4 +14,6 @@ yarn-error.log*
 .vscode/
 .DS_Store
 .env
+
 package-lock.json
+nuxt.config.js
