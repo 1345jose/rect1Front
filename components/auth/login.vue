@@ -140,18 +140,29 @@ export default {
         ...mapActions("auth", ["login"]),
 
         async loguearUsuario() {
+
+            if (!this.$refs.valLogin.validate()) {
+                return;
+            }
+
             try {
                 await this.login(this.formInicio)
 
                 this.$router.push("/inicio/principal");
                 this.$toast.success("Bienvenido a Rect1");
 
+                this.$refs.valLogin.resetValidation()
             } catch (error) {
                 this.$toast.error(error?.response?.data?.error || 'Ha ocurrido un error al iniciar sesion')
             }
         },
 
         async crear() {
+
+            if (!this.$refs.valCrear.validate()) {
+                return;
+            }
+
             try {
 
                 const data = {
@@ -161,6 +172,21 @@ export default {
                 await this.$axios.post('auth/crear-usuario', data, {
                     headers: { Accept: "text/html" }
                 });
+
+                this.$toast.success('Su cuenta ha sido Creada Correctamente');
+                this.crearCuenta = false
+
+                this.formCrear = {
+                    email: null,
+                    password: null,
+                    nombre_completo: null,
+                    apellidos: null,
+                    telefono: null,
+                    numero_documento: null
+                }
+
+                this.$refs.valCrear.resetValidation()
+
             } catch (error) {
                 this.$toast.error(error?.response?.data?.error || 'Ha ocurrido un error al crear tu cuenta')
             }
