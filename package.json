@@ -13,9 +13,11 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/dotenv": "^1.4.2",
+    "@nuxtjs/toast": "^3.3.1",
     "core-js": "^3.45.1",
     "nuxt": "^2.15.8",
-    "regenerator-runtime": "^0.14.1"
+    "regenerator-runtime": "^0.14.1",
+    "vue-toastification": "^1.7.14"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.0.0"

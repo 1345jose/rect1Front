@@ -16,4 +16,3 @@ yarn-error.log*
 .env
 
 package-lock.json
-nuxt.config.js
